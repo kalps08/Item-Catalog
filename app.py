@@ -25,12 +25,12 @@ app = Flask(__name__)
 
 # declare my client ID by referencing this clients_secrets json file
 CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
+    open('/var/www/catalog/Item-Catalog/client_secrets.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Item Catalog Application"
 
 # Connect to Database and create database session
 # engine = create_engine('sqlite:///item-catalog.db', connect_args={'check_same_thread': False})
-engine = create_engine('postgresql://catalog:yourPassword@localhost/catalog')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -61,7 +61,7 @@ def fb_connect():
     app_id = json.loads(open('/var/www/catalog/Item-Catalog/fb_client_secrets.json', 'r').read())[
         'web']['app_id']
     app_secret = json.loads(
-        open('fb_client_secrets.json', 'r').read())['web']['app_secret']
+        open('/var/www/catalog/Item-Catalog/fb_client_secrets.json', 'r').read())['web']['app_secret']
     url = 'https://graph.facebook.com/oauth/access_token?' \
           'grant_type=fb_exchange_token&client_id=%s&client_secret=%s&fb_exchange_token=%s' \
           % (app_id, app_secret, access_token)
@@ -622,7 +622,8 @@ def item_json(item_id):
     return jsonify(item.serialize)
 
 
+app.secret_key = 'super_secret_key'
 if __name__ == '__main__':
-    app.secret_key = 'super_secret_key'
+    #app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=5000)

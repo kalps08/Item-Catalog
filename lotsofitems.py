@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from models import Category, Base, Item, User
 
 # engine = create_engine('sqlite:///item-catalog.db')
-engine = create_engine('postgresql://catalog:yourPassword@localhost/catalog')
+engine = create_engine('postgresql://catalog:password@localhost/catalog')
 
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
@@ -267,7 +267,7 @@ session.commit()
 item3 = Item(user_id=1, title="TYR Junior Blackhawk Racing Goggles",
              description="Engineered for both competition and training, the low profile design of "
                          "the Blackhawk Racing swimming goggle ensures a close fit with minimal drag. "
-                         "Lightweight and streamlined, the Blackhawk’s watertight construction "
+                         "Lightweight and streamlined, the Blackhawks watertight construction "
                          "includes Durafit Silicone gaskets, wide peripheral range and five removable "
                          "nosebridge size options.",
              category=cat1)
