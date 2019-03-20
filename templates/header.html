@@ -1,0 +1,26 @@
+
+    <div class="row top-menu">
+        <div class="col-md-offset-1 col-md-5 text-left">
+            <h1>Catalog</h1>
+        </div>
+	    <div class="col-md-5 text-right">
+        	{%if 'username' not in session %}
+                <a class="login-btn btn btn-default" href="{{url_for('show_login')}}" role="button">Login</a>
+			{% else %}
+                <a class="login-btn btn btn-primary btn-lg" href="{{url_for('disconnect')}}" role="button">Logout</a>
+                <p>Logged in as {{ session['username'] }} </p>
+			{% endif %}
+        </div>
+    </div>
+    <div class="row divider">
+	    <div class="col-md-12"></div>
+	</div>
+    <div class="row">
+	    <div class="col-md-12">
+		    <a class="top-link" href="{{url_for('show_latest_items')}}">
+			    <span class="glyphicon glyphicon-home " aria-hidden="true"></span>Show All Categories
+		    </a>
+	    </div>
+    </div>
+
+

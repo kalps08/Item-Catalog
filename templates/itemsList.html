@@ -1,0 +1,60 @@
+{% extends "main.html" %}
+{% include "header.html" %}
+{% block content %}
+
+    <div class = 'flash'>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li> <strong> {{ message }} </strong> </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="container main-div">
+            <div class="col-md-offset-1 col-md-5">
+                <H1>Categories</H1>
+                {% for category in categories %}
+                    <a href = "{{ url_for('show_items_for_category', category_name = category.name) }}">
+                        <h3>{{category.name}}</h3>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="col-md-1 categories-line"></div>
+            <div class="col-md-5">
+                    {%if user_authorized %}
+                    <div>
+                        {% if cat_name == null %}
+                            <a class="action-buttons" href = "{{ url_for('add_item', category_name="Basketball") }}">
+                                Add Item
+                            </a>
+                        {% else %}
+                            <a class="action-buttons" href = "{{ url_for('add_item', category_name=cat_name) }}">
+                                Add Item
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+                {% if cat_name == null %}
+                   <h1>Latest Items</h1>
+                    {% for a, b, c, d in full_info %}
+                        <a href = "{{url_for('show_item_description', category_name = d, item_name = a, item_id = b)}}">
+                            <h3>{{a}} <span class="cat_name">({{ d }})</span></h3>
+                        </a>
+                    {% endfor %}
+                {% else %}
+                    <h2>{{ cat_name }} ({{ items.__len__() }} items ) </h2>
+                    {% for item in items %}
+                        <a href = "{{url_for('show_item_description', category_name = cat_name, item_name = item.title, item_id = item.id)}}">
+                            <h3>{{ item.title }}</h3>
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

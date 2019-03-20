@@ -1,0 +1,235 @@
+body {
+	font-family: "Helvetica Neue Bold", Roboto, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	background-color: #9999999c;
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+	color: #51453B;
+	line-height: 60px;
+}
+
+ p {
+ 	font-family: "Helvetica Neue", Roboto, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7B7573;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #0093B9;
+ 	line-height: 17px;
+ }
+.padding-top {
+	margin-top: 20px;
+	padding-top: 35px;
+}
+.padding-bottom {
+	padding-bottom: 25px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+.btn {
+	padding: 20px;
+	margin: 0;
+	border-color: #9FB80A;
+	border-width: 2px;
+	color: #9FB80A;
+}
+.btn:hover {
+	border-color: #9FB80A;
+}
+.btn.delete {
+	border-color: #aaaaaa;
+	color: #aaaaaa;
+}
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: red;
+}
+.glyphicon {
+	margin-right: 10px;
+}
+.top-menu {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: navy;
+}
+.top-menu p {
+	margin-bottom: 15px;
+	line-height: 16px;
+    font-weight: bold;
+    color: white;
+}
+.top-menu a {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	line-height: 10px;
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.top-link a {
+	color: cadetblue;
+	padding-left: 35px;
+	margin-top: 35px;
+	font-size: 20px;
+}
+.top-menu h1 {
+    font-family: "Helvetica Neue Light", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+.divider {
+	height: 3px;
+	background-color: #e5e5e5;
+}
+
+ .category-list {
+	 background-color: #F0F0F0;
+	 padding: 20px;
+ }
+ .category-list:hover {
+ 	background-color: #e1e17f;
+ 	padding: 20px;
+}
+.item {
+	background: #F0F0F0;
+	padding: 20px;
+	margin: 20px;
+	margin-left: -20px;
+}
+
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}
+.creator figcaption {
+	font-size: 14px;
+	color: #7B7573;
+	font-weight: 400;
+	margin-top: -20px;
+}
+.flash {
+	background-color: lightgrey;
+	width:100%;
+	text-decoration: none;
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+}
+
+.login-btn {
+	border: none;
+	background-color: orange;
+	padding: 15px 40px;
+	color: black;
+}
+
+.main-div {
+	background-color: white;
+	margin-top: 50px;
+	padding: 30px;
+	border-width: 2px;
+	border-color: lightgray;
+	border-style: ridge;
+	border-radius: 2px;
+	height: auto;
+}
+
+.main-div a {
+	font-size: 25px;
+	margin-bottom: 35px;
+}
+
+.main-div h2 {
+	font-size: 25px;
+	margin-bottom: 35px;
+}
+
+.categories-line {
+	border-left: 1px solid lightgrey;
+	height: 80%;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.cat_name {
+	color: grey;
+}
+
+.item-desc h1 {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: navy;
+	font-weight: bold;
+}
+
+.item-desc p {
+	font-size: 20px;
+}
+
+.item-desc h3 {
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+.action-buttons {
+	color: orangered;
+	text-underline: orangered;
+	font-weight: bold;
+	font-size: medium;
+}
+
+.action-buttons a:hover {
+  color: blue;
+}
+.action-buttons a:active {
+  color: green;
+}
+
+.form-label {
+	font-size: 20px;
+}
+
+.form-select {
+	font-size: 20px;
+	background-color: lightgrey;
+	margin-left: 10px
+}
+
+.form-input {
+	font-size: 25px;
+	font-weight: normal;
+	background-color: lightgrey;
+}
+
+.cancel-btn {
+	margin-left: 30px;
+}
